@@ -302,7 +302,7 @@ def _render_scorer():
                         ("🧠 Semantic",  res.semantic_score,  "#00e5ff"),
                         ("🔑 Keyword",   res.keyword_score,   "#7fff6b"),
                         ("💪 Substance", res.substance_score, "#ffd166"),
-                        ("🤖 AI Noise",  res.ai_noise_score,  "#ff6b9d"),
+                        ("🤖 AI Noise (Authenticity)", res.ai_noise_score, "#22c55e" if res.ai_noise_score >= 70 else "#f59e0b" if res.ai_noise_score >= 50 else "#ef4444"),
                     ]:
                         st.markdown(f"""
                         <div style="margin-bottom:8px;">
